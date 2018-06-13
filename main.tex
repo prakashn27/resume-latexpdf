@@ -1,0 +1,167 @@
+% \documentclass{article}
+% \usepackage[utf8]{inputenc}
+
+% \title{Prakash Natarajan Resume}
+% \author{prakash natarajan}
+% \date{June 2018}
+
+% \begin{document}
+
+% \maketitle
+
+% \section{Introduction}
+
+% \end{document}
+
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{http://www.prakashn.com/}{\Large Prakash Natarajan}} & Email : \href{mailto:mail@prakashn.com}{mail@prakashn.com}\\
+  \href{https://prakashn.com/}{https://www.prakashn.com} & Mobile : +1-716-361-8720 \\
+  \href{https://www.linkedin.com/in/prakashnatarajan1}{https://www.linkedin.com/in/prakashnatarajan1} & \href{https://github.com/prakashn27}{https://github.com/prakashn27} \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {State University of New York, Buffalo}{Buffalo, NY}
+      {Master of Science in Computer Science;  GPA: 3.67}{Aug. 2014 -- Dec. 2015}
+    \resumeSubheading
+      {Anna University}{Chennai, India}
+      {Bachelor of Engineering in Electronics and Communication;  GPA: 3.55}{Aug. 2007 -- June. 2011}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {FactSet Research Systems - Datafeeds}{Norwalk, CT}
+      {Software Engineer}{Feb 2016 - Present}
+      \resumeItemListStart
+        \resumeItem{Selecting the best server}
+          {Toolkits rely on the local balancer VIP to connect to our server. Thus a client from Sydney may get connected to server in New Jersey, even if the server in Sydney is free of load. I added a framework within the toolkit to select the best server based on certain parameters and reduced the load on the load balancer by 15\%.}
+        \resumeItem{Enhanced Logger}
+          {Datafeed Server debugging relied on the logs in each individual servers. There is not central repository where we can check for logs in many machines at the same time. Created a framework by using central logging API, to easily send the logs about of our servers. This enabled faster debugging of client issues. }
+        \resumeItem{Added Monitoring}
+          {Datafeed has some backend processes which manage the mail alerting system for all our services in backend. Sometimes this mail alerting system goes down and we were not notified about this. I integrated our proprietary process monitoring system to look for the mail alerting system uptime and alert us if it goes down and enabled better monitoring. }
+          \resumeItem{Moved to Native Libraries}
+          {Datafeed Toolkits use few third party libraries and everytime we have to update the thirdparty library to use it with the toolkit. Replaced the support for most of the third party library with native windows libraries. This reduced the file size of our executable by 25\%.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Amazon Web Services - Lambda}{Seattle, WA}
+      {Software Development Engineer Intern}{Summer 2014}
+      \resumeItemListStart
+        \resumeItem{Dynamic Integration}
+          {Developed a framework for rendering User Interface dynamically from the configuration file. Data rendering in backend is managed by an interface implementation in java. This reduced the time of adding a new application into lambda portal from two weeks to just 2 days. This also enabled easy code maintenance by abstracting the logic to JSON configuration file. Designed the front end with AngularJS, backend with Java and scripting for accessing DynamoDB is done in python. }
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Cognizant Technology Solutions}{Chennai, India}
+      {Programmer Analyst}{June 2011 - March 2014}
+      \resumeItemListStart
+        \resumeItem{Defects Dashboard}
+          {Enhanced the dashboard which was used for displaying the time critical defects, collaborated with quality assurance team for running and maintaining automated scripts and integrated the results with portal. I also created a mailing windows service to email the screen shot of the defect with additional details of the exception.}
+        \resumeItem{Insurance Applications}
+          {Owned 3 insurance industry applications for underwriters and handled the production level tickets for external customers.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeSubItem{Stock Volatility using Map Reduce}
+      {Calculated the volatility of stocks using java Hadoop, Pig, Hive, Hbase, Accumulo and compared its performance.}
+    \resumeSubItem{ui-select dropdown}
+      {Created a group header selector event in AngularJS for elements that are grouped together in ui-select dropdown. This enabled selecting all the items within a header in single click.}
+    \resumeSubItem{AlgorithmCrackers}
+      {Managing AlgorithmCrackers organization contains algorithmic problems which we encounter in everyday programming. One of its repository has more than 60 stars. }
+  \resumeSubHeadingListEnd
+  
+%
+%--------PROGRAMMING SKILLS------------
+%\section{Programming Skills}
+%  \resumeSubHeadingListStart
+%    \item{
+%      \textbf{Languages}{: Scala, Python, Javascript, C++, SQL, Java}
+%      \hfill
+%      \textbf{Technologies}{: AWS, Play, React, Kafka, GCE}
+%    }
+%  \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
