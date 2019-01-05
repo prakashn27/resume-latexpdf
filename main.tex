@@ -109,14 +109,14 @@
       {FactSet Research Systems - Datafeeds}{Norwalk, CT}
       {Software Engineer}{Feb 2016 - Present}
       \resumeItemListStart
-        \resumeItem{Selecting the best server}
-          {Toolkits rely on the local balancer VIP to connect to our server. Thus a client from Sydney may get connected to server in New Jersey, even if the server in Sydney is free of load. I added a framework within the toolkit to select the best server based on certain parameters and reduced the load on the load balancer by 15\%.}
+        \resumeItem{Ansible Support}
+          {Automated the windows server deployment using ansible. This reduced the deployment time by 80\%. Ansible is also used to check the service status of all the boxes. It used to take an hour to check status in all machines. Now it takes just 5 minutes.}
+        \resumeItem{Monitoring}
+          {Enhanced the system which monitors all out datafeed services. Moved the configurations to redis to have a persistent status of configurations. Updated the User Interface to React, which makes the addition and manipulation of new servers easier.}
         \resumeItem{Enhanced Logger}
           {Datafeed Server debugging relied on the logs in each individual servers. There is not central repository where we can check for logs in many machines at the same time. Created a framework by using central logging API, to easily send the logs about of our servers. This enabled faster debugging of client issues. }
         \resumeItem{Added Monitoring}
           {Datafeed has some backend processes which manage the mail alerting system for all our services in backend. Sometimes this mail alerting system goes down and we were not notified about this. I integrated our proprietary process monitoring system to look for the mail alerting system uptime and alert us if it goes down and enabled better monitoring. }
-          \resumeItem{Moved to Native Libraries}
-          {Datafeed Toolkits use few third party libraries and everytime we have to update the thirdparty library to use it with the toolkit. Replaced the support for most of the third party library with native windows libraries. This reduced the file size of our executable by 25\%.}
       \resumeItemListEnd
 
     \resumeSubheading
